@@ -27,7 +27,6 @@ function MobileNav({ open, setOpen }) {
         <Link href="/about">
           <a
             className="text-xl font-medium my-4"
-            href="/about"
             onClick={() =>
               setTimeout(() => {
                 setOpen(!open);
