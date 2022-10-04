@@ -45,7 +45,7 @@ function MobileNav({ open, setOpen }) {
               }, 100)
             }
           >
-            Skills
+            IT Skills
           </a>
         </Link>
 
@@ -115,7 +115,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex">
           <NavLink to="/experience">EXPERIENCE</NavLink>
-          <NavLink to="/skills">SKILLS</NavLink>
+          <NavLink to="/skills">IT SKILLS</NavLink>
           <NavLink to="/projects">PROJECTS</NavLink>
           <NavLink to="/about">ABOUT</NavLink>
         </div>
