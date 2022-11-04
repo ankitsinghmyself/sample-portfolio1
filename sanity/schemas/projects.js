@@ -18,12 +18,10 @@ export default {
       },
     },
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'images',
+      title: 'Images',
+      type: 'array',
+      of: [{ type: 'image' }],
     },
     {
       name: 'description',

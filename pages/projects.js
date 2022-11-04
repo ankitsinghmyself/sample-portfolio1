@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable @next/next/no-img-element */
 
 import React, { useState, useEffect } from 'react';
@@ -30,70 +31,53 @@ const Projects = () => {
           <h2 className="text-lg text-gray-600 flex justify-center mb-12">
             Welcome to my projects page!
           </h2>
-          <section className="container mx-auto">
-            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
-              {projects.map((project, index) => (
-                <div key={project.name} className="justify-center">
-                  <div className="flex flex-col md:flex-row md:max-w-2xl rounded-lg bg-white shadow-lg">
-                    <img
-                      className=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
-                      src={urlFor(project.image).url()}
-                      alt={project.name}
-                    />
-                    <div className="p-6 flex flex-col justify-center">
-                      <div className="text-gray-600 text-md mt-2">
-                        <span className="font-semibold">Project Name: </span>
-                        {project.name}
-                      </div>
-                      <div className="text-gray-600">
-                        <span className="font-semibold">Technologies: </span>
-                        {project.technologies.map((tech) => (
-                          <div
-                            key={tech}
-                            className="text-xs inline-flex items-center  mr-2 px-3 py-1 bg-gray-500 text-white rounded-full"
-                          >
-                            {tech}
-                          </div>
-                        ))}
-                      </div>
-                      <div className="text-gray-600 text-md mt-2">
-                        <span className="font-semibold">Description: </span>
-                        {project.description}
-                      </div>
-
-                      <div className="text-gray-600 text-md mt-2 ">
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-white hover:underline"
-                        >
-                          <button className="bg-gray-500 text-white font-bold py-2 px-4 rounded mt-4">
-                            Source Code
-                          </button>
-                        </a>
-
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-white hover:underline"
-                        >
-                          <button className="bg-gray-500 text-white font-bold py-2 px-4 rounded mt-4 ml-4">
-                            Demo
-                          </button>
-                        </a>
-                      </div>
-                      <div className="text-gray-600 text-md mt-2">
-                        <span className="font-semibold">Date:</span>
-                        {new Date(project.date).toLocaleDateString()}
-                      </div>
-                    </div>
-                  </div>
+          <ol className="border-l-2 border-blue-600">
+            {projects.map((project) => (
+              <li key={project.name}>
+                <div className="flex flex-start items-center">
+                  <div className="bg-blue-600 w-4 h-4 flex items-center justify-center rounded-full -ml-2 mr-3 -mt-2"></div>
+                  <h4 className="text-gray-800 font-semibold text-xl -mt-2">
+                    {project.name}
+                  </h4>
                 </div>
-              ))}
-            </div>
-          </section>
+                <div className="ml-6 mb-6 pb-6">
+                  <p className="text-gray-600 text-sm">{project.date}</p>
+
+                  <p className="text-gray-700 mt-2 mb-4">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap items-center justify-center">
+                    {project.technologies.map((tag) => (
+                      <span className="bg-blue-600 text-white text-xs font-semibold rounded-full px-3 py-1 mr-2 mb-2">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap items-center justify-center">
+                    {project.images.map((image) => (
+                      <img
+                        src={urlFor(image).url()}
+                        alt={project.name}
+                        className="w-1/2 h-1/2"
+                      />
+                    ))}
+                  </div>
+                  <a
+                    href="#!"
+                    className="text-blue-600 hover:text-blue-700 focus:text-blue-800 duration-300 transition ease-in-out text-sm"
+                  >
+                    <button
+                      type="button"
+                      className="inline-flex px-4 py-1.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    >
+                      <GlobeAltIcon className="w-5 h-5 mr-2" />
+                      Github
+                    </button>
+                  </a>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </div>
