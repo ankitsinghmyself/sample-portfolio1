@@ -24,7 +24,7 @@ function MobileNav({ open, setOpen }) {
         </Link>
       </div>
       <div className="flex flex-col ml-4">
-        <Link href="/skills">
+        <Link href="/">
           <a
             className="text-xl font-medium my-4"
             onClick={() =>
@@ -33,7 +33,7 @@ function MobileNav({ open, setOpen }) {
               }, 100)
             }
           >
-            IT Skills
+            HOME
           </a>
         </Link>
 
@@ -46,7 +46,7 @@ function MobileNav({ open, setOpen }) {
               }, 100)
             }
           >
-            About
+            ABOUT
           </a>
         </Link>
         <Link href="/projects">
@@ -58,7 +58,7 @@ function MobileNav({ open, setOpen }) {
               }, 100)
             }
           >
-            Projects
+            PROJECTS
           </a>
         </Link>
       </div>
@@ -69,7 +69,7 @@ function MobileNav({ open, setOpen }) {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
+    <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center pl-20 pr-20">
       <MobileNav open={open} setOpen={setOpen} />
       <div className="w-3/12 flex items-center">
         <Link href="/">
@@ -102,7 +102,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex">
-          <NavLink to="/skills">IT SKILLS</NavLink>
+          <NavLink to="/">HOME</NavLink>
           <NavLink to="/projects">PROJECTS</NavLink>
           <NavLink to="/about">ABOUT</NavLink>
         </div>
