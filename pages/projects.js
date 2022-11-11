@@ -56,6 +56,20 @@ const Projects = () => {
                 <p className="my-6 text-lg text-gray-700 leading-relaxed">
                   {project.description}
                 </p>
+                <div className="flex justify-left text-sm">
+                  <div className="flex items-center space-x-2">
+                    <span>
+                      {project.technologies.map((technology) => (
+                        <button
+                          type="button"
+                          class="mr-2 bg-gray-400  text-white p-2 rounded uppercase  leading-none mb-2 "
+                        >
+                          {technology}
+                        </button>
+                      ))}
+                    </span>
+                  </div>
+                </div>
                 <a
                   href={project.link}
                   rel="noopener noreferrer"
