@@ -18,6 +18,28 @@ export default function Home() {
             Web Applications that leads to the success of the overall product
           </p>
         </div>
+        <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-center">
+          <div className="rounded-md shadow">
+            <a
+              href="https://www.linkedin.com/in/ankit-singh-922079256/"
+              className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-500 hover:bg-red-600 md:py-4 md:text-lg md:px-10"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Connect with me!
+            </a>
+          </div>
+          <div className="mt-3 sm:mt-0 sm:ml-3">
+            <a
+              href="https://drive.google.com/file/d/1A6vs_HcR65y1M7CJfOEVzH00PyYvTUjx/view?usp=sharing"
+              className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-500 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
+              target="_blank"
+              rel="noreferrer"
+            >
+              My Resume
+            </a>
+          </div>
+        </div>
       </main>
     </div>
   );

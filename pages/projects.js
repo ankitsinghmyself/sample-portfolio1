@@ -29,10 +29,11 @@ const Projects = () => {
     <div className="min-h-screen pt-10 pb-10 bg-gray-100 text-gray-900 flex justify-center">
       <div className="container mx-auto">
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-5xl flex justify-center cursive">My Projects</h1>
-          <h2 className="text-lg text-gray-600 flex justify-center mb-12">
+          <h2 className="text-5xl flex justify-center cursive">My Projects</h2>
+          <hr className="w-10 mt-1 h-1.5 bg-red-500 rounded-full" />
+          <p className="text-lg text-gray-600 flex justify-center mb-12">
             Welcome to my projects page!
-          </h2>
+          </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
