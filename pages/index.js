@@ -18,7 +18,7 @@ export default function Home() {
             Web Applications that leads to the success of the overall product
           </p>
         </div>
-        <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-center">
+        <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-center pb-40">
           <div className="rounded-md shadow">
             <a
               href="https://www.linkedin.com/in/ankitsinghmyself/"
@@ -29,16 +29,16 @@ export default function Home() {
               Connect with me!
             </a>
           </div>
-          {/* <div className="mt-3 sm:mt-0 sm:ml-3">
+          <div className="mt-3 sm:mt-0 sm:ml-3">
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1cXjUkPhHm7zFPj0dfIUEFkJ1zwCbPW3-/view?usp=sharing"
               className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-500 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
               target="_blank"
               rel="noreferrer"
             >
               My Resume
             </a>
-          </div> */}
+          </div>
         </div>
       </main>
     </div>
