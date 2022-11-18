@@ -29,9 +29,9 @@ const Projects = () => {
     <div className="min-h-screen pt-10 pb-10 bg-gray-100 text-gray-900 flex justify-center">
       <div className="container mx-auto">
         <div className="flex flex-col items-center justify-center">
-          <h2 className="text-5xl flex justify-center cursive">My Projects</h2>
+          <h2 className="text-5xl flex justify-center cursive">PROJECTS</h2>
           <hr className="w-10 mt-1 h-1.5 bg-red-500 rounded-full" />
-          <p className="text-lg text-gray-600 flex justify-center mb-12">
+          <p className="text-lg text-gray-600 flex text-center mb-12 p-10 space-x-4 ">
             Welcome to my projects page!
           </p>
         </div>
@@ -49,15 +49,16 @@ const Projects = () => {
                 </a>
               </h3>
               <div className="text-gray-500 text-xs space-x-4 space-y-2">
-                <span>
-                  <CalendarIcon className="inline-block w-6 h-6" />
-                  {project.date}
-                </span>
-
-                <p className="my-6 text-lg text-gray-700 leading-relaxed">
+                <img
+                  src={urlFor(project.image).url()}
+                  alt={project.title}
+                  className="w-full h-64 rounded-t object-cover"
+                />
+                <p className="my-6 text-sm text-gray-700 leading-relaxed !ml-0">
                   {project.description}
                 </p>
-                <div className="flex justify-left text-sm">
+                Technologies Used:
+                <div className="flex justify-left text-sm ">
                   <div className="flex items-center space-x-2">
                     <span>
                       {project.technologies.map((technology) => (
@@ -71,17 +72,36 @@ const Projects = () => {
                     </span>
                   </div>
                 </div>
-                <a
-                  href={project.link}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="text-red-500 font-bold hover:underline hover:text-red-400 text-xl"
-                >
-                  View The Project{' '}
-                  <span role="img" aria-label="right pointer">
-                    👉
-                  </span>
-                </a>
+                <div className="flex items-center justify-center">
+                  {project.link ? (
+                    <div className="rounded-md   w-1/2">
+                      <a
+                        href={project.link}
+                        className="w-full flex items-center justify-center px-2 py-2 border border-transparent text-base  rounded-md text-white bg-red-500 hover:bg-red-400  md:text-sm md:-ml-4"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Demo{' '}
+                      </a>
+                    </div>
+                  ) : (
+                    ''
+                  )}
+                  {project.github ? (
+                    <div className="rounded-md shadow w-1/2 ">
+                      <a
+                        href={project.github}
+                        className=" w-full flex items-center justify-center px-2 py-2 border border-transparent text-base  rounded-md text-white bg-gray-500 hover:bg-gray-400  md:text-sm "
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Source Code{' '}
+                      </a>
+                    </div>
+                  ) : (
+                    ''
+                  )}
+                </div>
               </div>
             </article>
           ))}
