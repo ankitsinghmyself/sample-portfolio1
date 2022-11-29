@@ -72,7 +72,7 @@ const About = () => {
                     </div>
                   </div>
                   <div>
-                    NodeJS| NestJS | PHP
+                    NodeJS | NestJS | PHP
                     <div className="w-full bg-gray-200 h-1 mb-6">
                       <div className="w-3/5 h-full bg-green-500"></div>
                     </div>
