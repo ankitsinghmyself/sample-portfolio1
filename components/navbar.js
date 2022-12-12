@@ -61,6 +61,18 @@ function MobileNav({ open, setOpen }) {
             PROJECTS
           </a>
         </Link>
+        <Link href="/skills">
+          <a
+            className="text-xl font-normal my-4"
+            onClick={() =>
+              setTimeout(() => {
+                setOpen(!open);
+              }, 100)
+            }
+          >
+            SKILLS
+          </a>
+        </Link>
       </div>
     </div>
   );
@@ -69,7 +81,7 @@ function MobileNav({ open, setOpen }) {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center pl-20 pr-20">
+    <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center pl-4 pr-4">
       <MobileNav open={open} setOpen={setOpen} />
       <div className="w-3/12 flex items-center">
         <Link href="/">
@@ -104,6 +116,7 @@ export default function Navbar() {
         <div className="hidden md:flex">
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/projects">PROJECTS</NavLink>
+          <NavLink to="/skills">SKILLS</NavLink>
           <NavLink to="/about">ABOUT</NavLink>
         </div>
       </div>
