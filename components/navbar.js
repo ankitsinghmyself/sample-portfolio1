@@ -61,7 +61,7 @@ function MobileNav({ open, setOpen }) {
             PROJECTS
           </a>
         </Link>
-        <Link href="/skills">
+        {/* <Link href="/skills">
           <a
             className="text-xl font-normal my-4"
             onClick={() =>
@@ -72,7 +72,7 @@ function MobileNav({ open, setOpen }) {
           >
             SKILLS
           </a>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
@@ -116,7 +116,7 @@ export default function Navbar() {
         <div className="hidden md:flex">
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/projects">PROJECTS</NavLink>
-          <NavLink to="/skills">SKILLS</NavLink>
+          {/* <NavLink to="/skills">SKILLS</NavLink> */}
           <NavLink to="/about">ABOUT</NavLink>
         </div>
       </div>
