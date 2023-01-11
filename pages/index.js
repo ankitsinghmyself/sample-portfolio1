@@ -13,9 +13,13 @@ export default function Home() {
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
             <span className="block xl:inline">HEY, I&apos;M ANKIT SINGH</span>{' '}
           </h1>
-          <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5">
-            A focused Web/Mobile Developer building the Frontend of Mobile and
-            Web Applications that leads to the success of the overall product
+          <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:text-lg md:mt-5">
+            To obtain a challenging role as a Node.js and React Native
+            developer, where I can utilize my skills in JavaScript, Node.js, and
+            React Native to build high-performance and scalable web and mobile
+            applications, contribute to the development of robust back-end
+            systems, and create user-friendly and responsive user interfaces for
+            both iOS and Android platforms.
           </p>
         </div>
         <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-center pb-40">
