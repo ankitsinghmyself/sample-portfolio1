@@ -54,7 +54,7 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-64 rounded-t object-cover"
                 />
-                <p className="my-6 text-sm text-gray-700 leading-relaxed !ml-0">
+                <p className="text-justify text-clip h-20 my-6 text-sm text-gray-700 leading-relaxed !ml-0 !mb-3">
                   {project.description}
                 </p>
                 Technologies Used:
@@ -64,7 +64,7 @@ const Projects = () => {
                       {project.technologies.map((technology) => (
                         <button
                           type="button"
-                          class="mr-2 bg-gray-400  text-white p-2 rounded uppercase  leading-none mb-2 "
+                          class="mr-2 bg-gray-300 bg-opacity-50 text-gray-700 p-2 rounded uppercase  leading-none mb-2 "
                         >
                           {technology}
                         </button>

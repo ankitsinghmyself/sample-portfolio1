@@ -1,6 +1,19 @@
 import Head from 'next/head';
+import React, { useState, useEffect } from 'react';
+import sanityClient from '../sanity';
 
 export default function Home() {
+  const [experience, setExperience] = useState([]);
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "experience"]{
+      ...,
+    }`
+      )
+      .then((data) => setExperience(data))
+      .catch(console.error);
+  }, []);
   return (
     <div>
       <Head>
