@@ -84,14 +84,14 @@ export default function Home() {
               <span className="block xl:inline">HEY, I&apos;M ANKIT SINGH</span>{' '}
             </h1>
             <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:text-lg md:mt-5">
-              I&aposm a Senior Software Engineer with expertise in JavaScript,
+              I&apos;m a Senior Software Engineer with expertise in JavaScript,
               Node.js, ReactJS, React Native, HTML/CSS, SCSS, MySQL,
               SQLite/MongoDB, PHP, and Laravel. I have experience in building
               scalable mobile and web applications, optimizing performance, and
               ensuring scalability. My communication and collaboration skills
               enable me to work effectively in cross-functional teams. I have
               received awards for my commitment, determination, and innovative
-              projects. I hold a Master&aposs degree in Computer Application
+              projects. I hold a Master&apos;s degree in Computer Application
               from Visvesvaraya Technological University, Bangalore. I have
               built several projects, including an educational chatbot assistant
               and an Android app called NearbyPlaces.
