@@ -77,7 +77,7 @@ export default function Navbar() {
         </div>
         <div className="w-9/12 flex justify-end items-center">
           <div
-            className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden"
+            className="z-50  relative w-8 h-8 flex-col justify-between items-center xl:hidden md:hidden flexMobileNav"
             onClick={() => {
               setOpen(!open);
             }}
