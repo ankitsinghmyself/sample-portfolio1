@@ -35,6 +35,9 @@ function MobileNav({ open, setOpen }) {
         <NavLink to="home-section" onClick={() => setOpen(!open)}>
           HOME
         </NavLink>
+        <NavLink to="exp-section" onClick={() => setOpen(!open)}>
+          EXPERIENCE
+        </NavLink>
         <NavLink to="about-section" onClick={() => setOpen(!open)}>
           ABOUT
         </NavLink>
@@ -102,6 +105,7 @@ export default function Navbar() {
 
           <div className="hidden md:flex">
             <NavLink to="home-section">HOME</NavLink>
+            <NavLink to="exp-section">EXPERIENCE</NavLink>
             <NavLink to="projects-section">PROJECTS</NavLink>
             <NavLink to="about-section">ABOUT</NavLink>
           </div>

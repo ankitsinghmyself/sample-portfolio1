@@ -4,11 +4,11 @@ import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import sanityClient, { urlFor } from '../sanity';
 import animation from './LoadingAnimation.module.css';
-
+import exp from './Exp.module.css';
 export default function Home() {
   const [experiences, setExperiences] = useState([]);
   const [projects, setProjects] = useState([]);
-  const [numProjects, setNumProjects] = useState(3);
+  const [numProjects, setNumProjects] = useState();
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -33,46 +33,6 @@ export default function Home() {
       setIsLoaded(true);
     }, 2000);
   }, []);
-  const styles = {
-    jobContainer: {
-      overflowX: 'auto',
-    },
-    jobGrid: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-      gridGap: '20px',
-      padding: '20px',
-    },
-    jobDescription: {
-      position: 'relative',
-      border: '1px solid #ccc',
-      padding: '20px',
-    },
-    jobPoint: {
-      position: 'absolute',
-      top: 0,
-      left: '-15px',
-      width: '10px',
-      height: '10px',
-      borderRadius: '50%',
-      backgroundColor: '#fe4444',
-    },
-    jobTitle: {
-      fontSize: '24px',
-      fontWeight: 'bold',
-      marginBottom: '10px',
-    },
-    jobDescriptionText: {
-      fontSize: '16px',
-      marginBottom: '5px',
-    },
-    hr: {
-      border: 0,
-      height: '1px',
-      backgroundColor: '#ccc',
-      margin: '20px 0',
-    },
-  };
 
   return (
     <>
@@ -138,27 +98,34 @@ export default function Home() {
               </div>
             </main>
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <h3 className="text-5xl flex justify-center cursive">EXPERIENCE</h3>
-            <hr className="w-10 mt-1 h-1.5 bg-red-500 rounded-full" />
-          </div>
-          <div style={styles.jobContainer}>
-            <div style={styles.jobGrid}>
-              {experiences.map((experience) => (
-                <div style={styles.jobDescription} key={experience.id}>
-                  <div style={styles.jobPoint}></div>
-                  <div>
-                    <h2 style={styles.jobTitle}>{experience.title}</h2>
-                    <p style={styles.jobDescriptionText}>
-                      {experience.company}
-                    </p>
-                    <p style={styles.jobDescriptionText}>{experience.date}</p>
-                    {/* <p style={styles.jobDescriptionText}>{experience.location}</p> */}
-                    <p style={styles.jobDescriptionText}>
-                      {experience.details}
-                    </p>
+          <div id="exp-section">
+            <div className="flex flex-col items-center justify-center">
+              <h3 className="text-5xl flex justify-center cursive">
+                EXPERIENCE
+              </h3>
+              <hr className="w-10 mt-1 h-1.5 bg-red-500 rounded-full" />
+            </div>
+            <div className={exp.container}>
+              {experiences.map((experience, index) => (
+                <div
+                  className={[
+                    exp.timelineblock,
+                    index % 2 === 0
+                      ? exp.timelineblockleft
+                      : exp.timelineblockright,
+                  ].join(' ')}
+                  key={experience._id}
+                >
+                  <div className={exp.marker}></div>
+                  <div className={exp.timelinecontent}>
+                    <h3>{experience.title}</h3>
+                    <span>{experience.company}</span>
+                    <p></p>
+                    <span className="text-sm">{experience.date}</span>
+                    <hr className="w-10 mt-1 h-0.5 bg-red-500 rounded-full" />
+
+                    <p>{experience.details}</p>
                   </div>
-                  <hr style={styles.hr} />
                 </div>
               ))}
             </div>
@@ -244,7 +211,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          {numProjects < projects.length && (
+          {/* {numProjects < projects.length && (
             <div className="flex justify-center">
               <button
                 className="bg-red-600 hover:bg-red-400 text-white font-bold py-2 px-4 rounded"
@@ -253,7 +220,7 @@ export default function Home() {
                 Load More Projects {'>>>'}
               </button>
             </div>
-          )}
+          )} */}
           <div
             id="about-section"
             className="min-h-screen p-10 bg-gray-100 text-gray-900 flex justify-center"
