@@ -12,7 +12,7 @@ export default function BonusBall() {
     canvas.height = window.innerHeight;
 
     // Create the smaller balls
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 3; i++) {
       const ball = {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -21,7 +21,15 @@ export default function BonusBall() {
         radius: 10,
         color: 'red',
       };
-      ballsRef.current.push(ball);
+      const ball2 = {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: Math.random() * 2 - 1,
+        vy: Math.random() * 2 - 1,
+        radius: 10,
+        color: 'black',
+      };
+      ballsRef.current.push(ball, ball2);
     }
 
     // Animate the smaller balls
@@ -34,6 +42,7 @@ export default function BonusBall() {
         ctx.beginPath();
         ctx.arc(ball.x, ball.y, ball.radius, 0, 2 * Math.PI);
         ctx.fillStyle = ball.color;
+
         ctx.fill();
 
         ball.x += ball.vx;
