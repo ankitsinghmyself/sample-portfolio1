@@ -5,6 +5,8 @@ import React, { useState, useEffect } from 'react';
 import sanityClient, { urlFor } from '../sanity';
 import animation from './LoadingAnimation.module.css';
 import exp from './Exp.module.css';
+import BonusBall from '../components/BonusBall';
+
 export default function Home() {
   const [experiences, setExperiences] = useState([]);
   const [projects, setProjects] = useState([]);
@@ -28,6 +30,9 @@ export default function Home() {
       )
       .then((data) => setProjects(data))
       .catch(console.error);
+
+    //canvas
+
     // animation on load for 2 seconds
     setTimeout(() => {
       setIsLoaded(true);
@@ -42,6 +47,8 @@ export default function Home() {
         </div>
       )}
       <div>
+        <BonusBall />
+
         <>
           <div>
             <Head>
