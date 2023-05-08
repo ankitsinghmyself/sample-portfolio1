@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
-function NavLink({ to, children }) {
+function NavLink({ to, children, onClick }) {
   return (
     <ScrollLink
       to={to}
@@ -11,8 +11,9 @@ function NavLink({ to, children }) {
       spy={true}
       exact="true"
       offset={-80}
-      className={`mx-4 font-2xl font-semibold text-gray-700 hover:text-gray-100 transition duration-300 ease-in-out`}
-      activeClass="text-gray-100"
+      className={`mx-4 font-2xl py-5 font-semibold text-gray-700 hover:text-gray-400 transition duration-300 ease-in-out`}
+      activeClass="text-red-400"
+      onClick={onClick}
     >
       {children}
     </ScrollLink>
@@ -26,23 +27,23 @@ function MobileNav({ open, setOpen }) {
         open ? '-translate-x-0' : '-translate-x-full'
       } transition-transform duration-300 ease-in-out filter drop-shadow-md `}
     >
-      <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20">
+      <div className="flex items-center justify-center filter drop-shadow-md bg-gray-100 h-20">
         <Link href="#home-section">
           <a className="text-xl font-semibold">Ankit</a>
         </Link>
       </div>
       <div className="flex flex-col ml-4">
-        <NavLink to="home-section" onClick={() => setOpen(!open)}>
+        <NavLink to="home-section" onClick={() => setOpen(false)}>
           HOME
         </NavLink>
-        <NavLink to="exp-section" onClick={() => setOpen(!open)}>
+        <NavLink to="exp-section" onClick={() => setOpen(false)}>
           EXPERIENCE
         </NavLink>
-        <NavLink to="about-section" onClick={() => setOpen(!open)}>
-          ABOUT
-        </NavLink>
-        <NavLink to="projects-section" onClick={() => setOpen(!open)}>
+        <NavLink to="projects-section" onClick={() => setOpen(false)}>
           PROJECTS
+        </NavLink>
+        <NavLink to="about-section" onClick={() => setOpen(false)}>
+          ABOUT
         </NavLink>
       </div>
     </div>
@@ -52,7 +53,7 @@ function MobileNav({ open, setOpen }) {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const navBgColor = scrolled ? 'bg-red-600' : 'bg-transparent';
+  const navBgColor = scrolled ? 'bg-gray-100' : 'bg-transparent';
 
   useEffect(() => {
     const handleScroll = () => {

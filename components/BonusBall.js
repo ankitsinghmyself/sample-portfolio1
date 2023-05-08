@@ -27,7 +27,7 @@ export default function BonusBall() {
         vx: Math.random() * 2 - 1,
         vy: Math.random() * 2 - 1,
         radius: 10,
-        color: 'black',
+        color: 'gray',
       };
       ballsRef.current.push(ball, ball2);
     }

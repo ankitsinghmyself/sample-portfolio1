@@ -239,7 +239,7 @@ export default function Home() {
                     ABOUT ME
                   </h1>
                   <hr className="w-10 mt-1 h-1.5 bg-red-500 rounded-full" />
-                  <p className="text-lg text-gray-600 flex text-center mb-12 p-10 space-x-4 w-4/6 ">
+                  <p className="text-lg text-gray-600 flex text-center mb-12 space-x-4 w-4/6 ">
                     Here you will find more information about me, what I do, and
                     my current skills mostly in terms of programming and
                     technology
