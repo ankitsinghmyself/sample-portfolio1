@@ -14,30 +14,30 @@ export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "experiences"]{
-      ...,
-    }| order(year desc)`
-      )
-      .then((data) => setExperiences(data))
-      .catch(console.error);
-    sanityClient
-      .fetch(
-        `*[_type == "projects"]{
-      ...,
-    } | order(date desc)`
-      )
-      .then((data) => setProjects(data))
-      .catch(console.error);
+    const fetchData = async () => {
+      try {
+        const experiencesData = await sanityClient.fetch(
+          `*[_type == "experiences"] {...} | order(year desc)`
+        );
+        setExperiences(experiencesData);
 
-    //canvas
+        const projectsData = await sanityClient.fetch(
+          `*[_type == "projects"] {...} | order(date desc)`
+        );
+        setProjects(projectsData);
 
-    // animation on load for 2 seconds
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 2000);
+        // Simulating loading animation for 3 seconds
+        setTimeout(() => {
+          setIsLoaded(true);
+        }, 3000);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
   }, []);
+
 
   return (
     <>
