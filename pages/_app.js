@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
       {!isLoaded ? (
         <div className={animation.loadingAnimation}>
           <h3 class={animation.springyText}>Ankit</h3>
+          <br></br>
           <div className={animation.triangle}></div>
         </div>
       ) : (
