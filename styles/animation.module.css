@@ -19,8 +19,8 @@
     transform: rotate(360deg);
   }
 }
-.springy-text {
-  color: white;
+.springyText {
+  color: rgb(2, 2, 2);
   animation-name: springy-text;
   animation-duration: 1s;
   animation-timing-function: ease;
