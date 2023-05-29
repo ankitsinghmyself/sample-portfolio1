@@ -3,6 +3,7 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import { useEffect, useState } from 'react';
 import animation from '../styles/animation.module.css';
+import BonusBall from '../components/BonusBall';
 
 function MyApp({ Component, pageProps }) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -17,6 +18,7 @@ function MyApp({ Component, pageProps }) {
     <>
       {!isLoaded ? (
         <div className={animation.loadingAnimation}>
+          <BonusBall />
           <h3 class={animation.springyText}>Ankit</h3>
           <p></p>
           <div className={animation.triangle}></div>
