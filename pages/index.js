@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import sanityClient, { urlFor } from '../sanity';
-import animation from './LoadingAnimation.module.css';
 import exp from './Exp.module.css';
 import BonusBall from '../components/BonusBall';
 
@@ -11,7 +10,6 @@ export default function Home() {
   const [experiences, setExperiences] = useState([]);
   const [projects, setProjects] = useState([]);
   const [numProjects, setNumProjects] = useState();
-  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,11 +23,6 @@ export default function Home() {
           `*[_type == "projects"] {...} | order(date desc)`
         );
         setProjects(projectsData);
-
-        // Simulating loading animation for 3 seconds
-        setTimeout(() => {
-          setIsLoaded(true);
-        }, 3000);
       } catch (error) {
         console.error(error);
       }
@@ -41,14 +34,8 @@ export default function Home() {
 
   return (
     <>
-      {!isLoaded && (
-        <div className={animation.loadingAnimation}>
-          <div className={animation.triangle}></div>
-        </div>
-      )}
       <div>
         <BonusBall />
-
         <>
           <div>
             <Head>
