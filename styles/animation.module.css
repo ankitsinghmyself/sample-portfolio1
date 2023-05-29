@@ -19,3 +19,23 @@
     transform: rotate(360deg);
   }
 }
+.springy-text {
+  color: white;
+  animation-name: springy-text;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes springy-text {
+  0%   {
+    letter-spacing: 1.2em;
+    color: white;
+  }
+  100%   {
+    letter-spacing: 0.1em;
+    color: orange;
+  }
+}
