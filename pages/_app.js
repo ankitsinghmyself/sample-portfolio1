@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
           <BonusBall />
           <h3 class={animation.springyText}>Ankit</h3>
           <p></p>
-          {/* <div className={animation.triangle}></div> */}
+          <div className={animation.springyLine}></div>
         </div>
       ) : (
         <>

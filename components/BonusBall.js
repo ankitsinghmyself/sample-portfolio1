@@ -18,7 +18,7 @@ export default function BonusBall() {
         y: Math.random() * canvas.height,
         vx: Math.random() * 2 - 1,
         vy: Math.random() * 2 - 1,
-        radius: 10,
+        radius: 5,
         color: 'red',
       };
       const ball2 = {
@@ -26,7 +26,7 @@ export default function BonusBall() {
         y: Math.random() * canvas.height,
         vx: Math.random() * 2 - 1,
         vy: Math.random() * 2 - 1,
-        radius: 10,
+        radius: 5,
         color: 'gray',
       };
       ballsRef.current.push(ball, ball2);
