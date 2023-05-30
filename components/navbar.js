@@ -42,6 +42,9 @@ function MobileNav({ open, setOpen }) {
         <NavLink to="projects-section" onClick={() => setOpen(false)}>
           PROJECTS
         </NavLink>
+        <NavLink to="certifications-section" onClick={() => setOpen(false)}>
+          CERTIFICATIONS
+        </NavLink>
         <NavLink to="about-section" onClick={() => setOpen(false)}>
           ABOUT
         </NavLink>
@@ -108,6 +111,7 @@ export default function Navbar() {
             <NavLink to="home-section">HOME</NavLink>
             <NavLink to="exp-section">EXPERIENCE</NavLink>
             <NavLink to="projects-section">PROJECTS</NavLink>
+            <NavLink to="certifications-section">CERTIFICATIONS</NavLink>
             <NavLink to="about-section">ABOUT</NavLink>
           </div>
         </div>
