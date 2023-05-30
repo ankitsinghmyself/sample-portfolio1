@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     setTimeout(() => {
       setIsLoaded(true);
-    }, 3000);
+    }, 4000);
   }, []);
 
   return (
@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
           <BonusBall />
           <h3 class={animation.springyText}>Ankit</h3>
           <p></p>
-          <div className={animation.triangle}></div>
+          {/* <div className={animation.triangle}></div> */}
         </div>
       ) : (
         <>
