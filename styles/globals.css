@@ -4,7 +4,7 @@
 :root {
   --primary-color: #e9614f;
   --secondary-color: #050506;
-  --tertiary-color: #fcfcfc;
+  --tertiary-color: white;
 }
 html,
 body {
