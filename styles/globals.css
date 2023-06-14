@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --primary-color: #e9614f;
+  --secondary-color: #050506;
+  --tertiary-color: #dedee9;
+}
 html,
 body {
   padding: 0;
@@ -28,6 +33,6 @@ a {
   }
   body {
     color: black;
-    background: white;
+    background: var(--tertiary-color);
   }
 }
