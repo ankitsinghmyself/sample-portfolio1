@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head';
-import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
-import sanityClient, { urlFor } from '../sanity';
-import exp from './Exp.module.css';
-import BonusBall from '../components/BonusBall';
+import Head from "next/head";
+import Image from "next/image";
+import React, { useState, useEffect } from "react";
+import sanityClient, { urlFor } from "../sanity";
+import exp from "./Exp.module.css";
+import BonusBall from "../components/BonusBall";
 
 export default function Home() {
   const [experiences, setExperiences] = useState([]);
@@ -56,7 +56,7 @@ export default function Home() {
                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
                   <span className="block xl:inline">
                     HEY, I&apos;M ANKIT SINGH
-                  </span>{' '}
+                  </span>{" "}
                 </h1>
                 <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:text-lg md:mt-5">
                   I&apos;m a Senior Software Engineer with expertise in
@@ -112,7 +112,7 @@ export default function Home() {
                     index % 2 === 0
                       ? exp.timelineblockleft
                       : exp.timelineblockright,
-                  ].join(' ')}
+                  ].join(" ")}
                   key={experience._id}
                 >
                   <div className={exp.marker}></div>
@@ -184,11 +184,11 @@ export default function Home() {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            Demo{' '}
+                            Demo{" "}
                           </a>
                         </div>
                       ) : (
-                        ''
+                        ""
                       )}
                       {project.github ? (
                         <div className="rounded-md shadow w-1/2 ">
@@ -198,11 +198,11 @@ export default function Home() {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            Source Code{' '}
+                            Source Code{" "}
                           </a>
                         </div>
                       ) : (
-                        ''
+                        ""
                       )}
                     </div>
                   </div>
@@ -226,59 +226,56 @@ export default function Home() {
             </h3>
             <hr className="w-10 mt-1 h-1.5 bg-red-500 rounded-full" />
           </div>
-          
-          
 
           <div
             id="certifications-section"
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 bg-gray-100"
           >
             {certifications.map((certification) => (
-              
-              <div
-                className="flex justify-center"
-                key={certification._id}
-              >
+              <div className="flex justify-center" key={certification._id}>
                 <div class="bg-white rounded-lg shadow-lg p-4 m-4">
                   <div class="flex">
                     <div class="w-1/3">
                       <img
-                      src={urlFor(certification.image).url()}
-                      alt={certification.title}
-                      className="h-full w-full object-cover rounded"
-                    />
+                        src={urlFor(certification.image).url()}
+                        alt={certification.title}
+                        className="h-full w-full object-cover rounded"
+                      />
                     </div>
                     <div class="w-2/3 pl-4">
                       <h2 class="text-xl font-bold mb-2">
                         <a
-                        href={certification.link}
-                        alt={certification.title}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {certification.title}
-                      </a>
+                          href={certification.link}
+                          alt={certification.title}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {certification.title}
+                        </a>
                       </h2>
                       <p>
                         <span className="text-right">
-                        {new Date(certification.date).toLocaleString('en-US', {
-                          month: 'long',
-                        })}{' '}
-                        {new Date(certification.date).getFullYear()}
-                      </span>
+                          {new Date(certification.date).toLocaleString(
+                            "en-US",
+                            {
+                              month: "long",
+                            }
+                          )}{" "}
+                          {new Date(certification.date).getFullYear()}
+                        </span>
                       </p>
                       <p>
-                      <span>
-                        {certification.technologies.map((technology) => (
-                          <button
-                            key={technology}
-                            type="button"
-                            className="mr-6 text-xs bg-gray-300 bg-opacity-50 text-gray-700 p-2 rounded uppercase  leading-none mb-2 "
-                          >
-                            {technology}
-                          </button>
-                        ))}
-                      </span>
+                        <span>
+                          {certification.technologies.map((technology) => (
+                            <button
+                              key={technology}
+                              type="button"
+                              className="mr-6 text-xs bg-gray-300 bg-opacity-50 text-gray-700 p-2 rounded uppercase  leading-none mb-2 "
+                            >
+                              {technology}
+                            </button>
+                          ))}
+                        </span>
                       </p>
                     </div>
                   </div>
