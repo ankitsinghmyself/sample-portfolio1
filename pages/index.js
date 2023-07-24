@@ -233,17 +233,17 @@ export default function Home() {
           >
             {certifications.map((certification) => (
               <div className="flex justify-center" key={certification._id}>
-                <div class="bg-white rounded-lg shadow-lg p-4 m-4">
-                  <div class="flex">
-                    <div class="w-1/3">
+                <div className="bg-white rounded-lg shadow-lg p-4 m-4">
+                  <div className="flex">
+                    <div className="w-1/3">
                       <img
                         src={urlFor(certification.image).url()}
                         alt={certification.title}
                         className="h-full w-full object-cover rounded"
                       />
                     </div>
-                    <div class="w-2/3 pl-4">
-                      <h2 class="text-xl font-bold mb-2">
+                    <div className="w-2/3 pl-4">
+                      <h2 className="text-xl font-bold mb-2">
                         <a
                           href={certification.link}
                           alt={certification.title}
