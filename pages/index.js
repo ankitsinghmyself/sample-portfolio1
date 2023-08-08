@@ -353,7 +353,7 @@ export default function Home() {
               <p className="text-lg text-gray-600  text-center mb-12 space-x-4 w-4/6 ">
                 Here you will find more information about me, what I do, and my
                 current skills mostly in terms of programming and technology.
-                I&apos;m a <b>Web & Mobile Developer</b>
+                I&apos;m a <b>Web & Mobile Developer</b> &nbsp;
                 building the Front-end of Websites and Mobile Applications that
                 leads to the success of the overall product. Check out some of
                 my work in the Projects section. I also like sharing content
@@ -362,7 +362,7 @@ export default function Home() {
                 Feel free to Connect or Follow me on my
                 <a href="https://www.linkedin.com/in/ankitsinghmyself/">
                   <b>Linkedin</b>
-                </a>
+                </a>&nbsp;
                 where I post useful content related to
                 <strong>Mobile Development</strong> and Programming I&apos;m
                 open to Job opportunities where I can contribute, learn and
