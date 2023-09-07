@@ -33,9 +33,6 @@
     "eslint-config-next": "^12.3.1",
     "postcss": "^8.4.17",
     "tailwindcss": "^3.1.8"
-  },
-  "engines": {
-    "node": "18.x"
   }
   
 }
