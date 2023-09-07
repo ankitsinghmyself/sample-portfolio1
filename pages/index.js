@@ -140,42 +140,54 @@ export default function Home() {
             {projects.slice(0, numProjects).map((project) => (
               <div className="flex-1 p-4 flex justify-center" key={project._id}>
                 <article className="relative rounded-lg shadow-xl bg-white p-10">
-                  <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-red-700">
-                    <a
-                      href={project.link}
-                      alt={project.title}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {project.title}
-                    </a>
-                  </h3>
-                  <div className="text-gray-500 text-xs space-x-4 space-y-2">
+                  <div className="text-gray-500 text-xs  flex">
                     <img
                       src={urlFor(project.image).url()}
                       alt={project.title}
-                      className="w-full h-64 rounded-t object-cover"
+                      className="w-[100px] h-[100px] rounded-t object-cover"
                     />
-                    <p className="text-justify text-clip h-20 my-6 text-sm text-gray-700 leading-relaxed !ml-0 !mb-3">
-                      {project.description}
-                    </p>
-                    Technologies Used:
-                    <div className="flex justify-left text-sm ">
-                      <div className="flex items-center space-x-2">
-                        <span>
+                    <div className="flex-col pl-2">
+                      <h5 className="text-gray-800 text-xl  font-bold mb-2 hover:text-red-600">
+                        <a
+                          href={project.link}
+                          alt={project.title}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {project.title}
+                        </a>
+                      </h5>
+
+                      <div className="-mt-2 ">
+                        Technologies Used:
+                        <div className="flex ">
                           {project.technologies.map((technology) => (
-                            <button
+                            <div
                               key={technology}
-                              type="button"
-                              className="mr-6 -ml-4 bg-gray-300 bg-opacity-50 text-gray-700 p-2 rounded uppercase  leading-none mb-2 "
+                              class=" text-xs  m-1 bg-green-200 text-green-700 rounded-full"
                             >
-                              {technology}
-                            </button>
+                             
+                              {technology},
+                            </div>
                           ))}
-                        </span>
+                        </div>
                       </div>
                     </div>
-                    <div className="flex items-center justify-center">
+                  </div>
+                  <div className="text-gray-500 text-xs ">
+                    <p
+                      className="text-sm text-gray-600 overflow-hidden text-justify pt-2"
+                      style={{
+                        maxHeight: "4rem",
+                        WebkitLineClamp: 2,
+                        display: "-webkit-box",
+                        WebkitBoxOrient: "vertical",
+                      }}
+                    >
+                      {project.description}
+                    </p>
+
+                    <div className="flex items-center justify-center pt-5">
                       {project.link ? (
                         <div className="rounded-md   w-1/2">
                           <a
@@ -353,17 +365,17 @@ export default function Home() {
               <p className="text-lg text-gray-600  text-center mb-12 space-x-4 w-4/6 ">
                 Here you will find more information about me, what I do, and my
                 current skills mostly in terms of programming and technology.
-                I&apos;m a <b>Web & Mobile Developer</b> &nbsp;
-                building the Front-end of Websites and Mobile Applications that
-                leads to the success of the overall product. Check out some of
-                my work in the Projects section. I also like sharing content
-                related to the stuff that I have learned over the years in Web
-                Development so it can help other people of the Dev Community.
-                Feel free to Connect or Follow me on my
+                I&apos;m a <b>Web & Mobile Developer</b> &nbsp; building the
+                Front-end of Websites and Mobile Applications that leads to the
+                success of the overall product. Check out some of my work in the
+                Projects section. I also like sharing content related to the
+                stuff that I have learned over the years in Web Development so
+                it can help other people of the Dev Community. Feel free to
+                Connect or Follow me on my
                 <a href="https://www.linkedin.com/in/ankitsinghmyself/">
                   <b>Linkedin</b>
-                </a>&nbsp;
-                where I post useful content related to
+                </a>
+                &nbsp; where I post useful content related to
                 <strong>Mobile Development</strong> and Programming I&apos;m
                 open to Job opportunities where I can contribute, learn and
                 grow. If you have a good opportunity that matches my skills and

@@ -9,6 +9,16 @@ npm run dev
 # or
 yarn dev
 ```
+## Sanity 
+
+
+
+```bash
+npm install -g @sanity/cli
+
+npm i 
+sanity start
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
