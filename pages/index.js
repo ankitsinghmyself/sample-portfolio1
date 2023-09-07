@@ -42,6 +42,7 @@ export default function Home() {
       <div>
         <BonusBall />
         <>
+        <div className="">
           <div>
             <Head>
               <title>Ankit Singh</title>
@@ -160,14 +161,14 @@ export default function Home() {
 
                       <div className="-mt-2 ">
                         Technologies Used:
-                        <div className="flex ">
+                        <div className="flex  flex-wrap">
                           {project.technologies.map((technology) => (
                             <div
                               key={technology}
-                              class=" text-xs  m-1 bg-green-200 text-green-700 rounded-full"
+                              class=" text-xs  m-1 bg-green-200 text-green-700 rounded-[4px]"
                             >
                              
-                              {technology},
+                              {technology}
                             </div>
                           ))}
                         </div>
@@ -232,7 +233,7 @@ export default function Home() {
               </button>
             </div>
           )} */}
-          <div className="flex flex-col items-center justify-center bg-gray-100">
+          <div className="flex flex-col items-center justify-center pt-4 bg-gray-100">
             <h3 className="text-5xl flex justify-center cursive">
               CERTIFICATIONS
             </h3>
@@ -278,15 +279,17 @@ export default function Home() {
                       </p>
                       <p>
                         <span>
+                          <div className="flex  flex-wrap">
                           {certification.technologies.map((technology) => (
-                            <button
+                            <div
                               key={technology}
-                              type="button"
-                              className="mr-6 text-xs bg-gray-300 bg-opacity-50 text-gray-700 p-2 rounded uppercase  leading-none mb-2 "
+                              class=" text-xs  m-1 bg-green-200 text-green-700 rounded-[4px]"
                             >
+                             
                               {technology}
-                            </button>
+                            </div>
                           ))}
+                        </div>
                         </span>
                       </p>
                     </div>
@@ -428,6 +431,7 @@ export default function Home() {
             <h3 className="text-5xl flex justify-center cursive">CONTACT ME</h3>
             <hr className="w-10 mt-1 h-1.5 bg-red-500 rounded-full" />
           </div> */}
+        </div>
         </>
       </div>
     </>
