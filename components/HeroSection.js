@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section>
+    <>
       <div>
         <title>Ankit Singh</title>
         <meta name="description" content="Ankit Singh Profile" />
@@ -53,7 +53,7 @@ const HeroSection = () => {
           </div>
         </div>
       </main>
-    </section>
+    </>
   );
 };
 

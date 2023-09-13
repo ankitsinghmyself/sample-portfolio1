@@ -2,11 +2,11 @@ import React from "react";
 
 export default function AboutMe() {
   return (
-    <div id="about-section" className="p-10 text-gray-900 flex justify-center">
+    <div id="about-section" className="py-10 text-gray-900 flex justify-center">
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-5xl flex justify-center cursive">ABOUT ME</h1>
         <hr className="w-10 mt-1 h-1.5 bg-red-500 rounded-full" />
-        <p className="text-lg text-gray-600  text-center mb-12 space-x-4 w-4/6 ">
+        <p className="text-lg text-gray-600  text-center pt-10 mb-12 space-x-4 w-4/6 ">
           Here you will find more information about me, what I do, and my
           current skills mostly in terms of programming and technology. I&apos;m
           a <b>Web & Mobile Developer</b> &nbsp; building the Front-end of

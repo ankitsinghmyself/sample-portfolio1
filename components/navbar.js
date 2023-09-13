@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 function NavLink({ to, children, onClick }) {
   return (
@@ -24,7 +24,7 @@ function MobileNav({ open, setOpen }) {
   return (
     <div
       className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${
-        open ? '-translate-x-0' : '-translate-x-full'
+        open ? "-translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out filter drop-shadow-md `}
     >
       <div className="flex items-center justify-center filter drop-shadow-md bg-gray-100 h-20">
@@ -42,8 +42,8 @@ function MobileNav({ open, setOpen }) {
         <NavLink to="projects-section" onClick={() => setOpen(false)}>
           PROJECTS
         </NavLink>
-        <NavLink to="certifications-section" onClick={() => setOpen(false)}>
-          CERTIFICATIONS
+        <NavLink to="certificates-section" onClick={() => setOpen(false)}>
+          CERTIFICATES
         </NavLink>
         <NavLink to="about-section" onClick={() => setOpen(false)}>
           ABOUT
@@ -56,7 +56,9 @@ function MobileNav({ open, setOpen }) {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const navBgColor = scrolled ? 'bg-gray-100 bg-gradient-to-b from-transparent to-red-200 ' : 'bg-transparent';
+  const navBgColor = scrolled
+    ? "bg-gray-100 bg-gradient-to-b from-transparent to-red-200 "
+    : "bg-transparent";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,17 +66,15 @@ export default function Navbar() {
       setScrolled(isScrolled);
     };
 
-    document.addEventListener('scroll', handleScroll);
+    document.addEventListener("scroll", handleScroll);
 
     return () => {
-      document.removeEventListener('scroll', handleScroll);
+      document.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <nav
-      className={`sticky top-0 z-50 ${navBgColor} px-4 h-15 items-center`}
-    >
+    <nav className={`sticky top-0 z-50 ${navBgColor} px-4 h-15 items-center`}>
       <MobileNav open={open} setOpen={setOpen} />
       <div className="container mx-auto flex items-center justify-between">
         <div className="w-3/12 flex items-center">
@@ -92,17 +92,17 @@ export default function Navbar() {
             {/* hamburger button */}
             <span
               className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${
-                open ? 'rotate-45 translate-y-2' : ''
+                open ? "rotate-45 translate-y-2" : ""
               }`}
             />
             <span
               className={`h-1 w-0 bg-black rounded-lg transition-all duration-300 ease-in-out ${
-                open ? 'w-0' : 'w-full'
+                open ? "w-0" : "w-full"
               }`}
             />
             <span
               className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${
-                open ? '-rotate-45 -translate-y-2' : ''
+                open ? "-rotate-45 -translate-y-2" : ""
               }`}
             />
           </div>
@@ -111,7 +111,7 @@ export default function Navbar() {
             <NavLink to="home-section">HOME</NavLink>
             <NavLink to="exp-section">EXPERIENCE</NavLink>
             <NavLink to="projects-section">PROJECTS</NavLink>
-            <NavLink to="certifications-section">CERTIFICATIONS</NavLink>
+            <NavLink to="certificates-section">CERTIFICATES</NavLink>
             <NavLink to="about-section">ABOUT</NavLink>
           </div>
         </div>
