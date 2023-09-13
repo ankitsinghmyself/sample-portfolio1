@@ -84,7 +84,7 @@ export default function Navbar() {
         </div>
         <div className="w-9/12 flex justify-end items-center">
           <div
-            className="z-50  relative w-8 h-8 flex-col justify-between items-center xl:hidden md:hidden flexMobileNav"
+            className="z-50  relative w-5 h-5 flex-col justify-between items-center xl:hidden md:hidden flexMobileNav"
             onClick={() => {
               setOpen(!open);
             }}
@@ -92,17 +92,17 @@ export default function Navbar() {
             {/* hamburger button */}
             <span
               className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${
-                open ? 'rotate-45 translate-y-3.5' : ''
+                open ? 'rotate-45 translate-y-2' : ''
               }`}
             />
             <span
-              className={`h-1 w-full bg-black rounded-lg transition-all duration-300 ease-in-out ${
+              className={`h-1 w-0 bg-black rounded-lg transition-all duration-300 ease-in-out ${
                 open ? 'w-0' : 'w-full'
               }`}
             />
             <span
               className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${
-                open ? '-rotate-45 -translate-y-3.5' : ''
+                open ? '-rotate-45 -translate-y-2' : ''
               }`}
             />
           </div>
