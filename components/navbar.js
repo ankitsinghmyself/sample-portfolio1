@@ -56,7 +56,7 @@ function MobileNav({ open, setOpen }) {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const navBgColor = scrolled ? 'bg-gray-100' : 'bg-transparent';
+  const navBgColor = scrolled ? 'bg-gray-100 bg-gradient-to-b from-transparent to-red-200 ' : 'bg-transparent';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,7 +73,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 ${navBgColor} px-4 py-4 h-15 items-center`}
+      className={`sticky top-0 z-50 ${navBgColor} px-4 h-15 items-center`}
     >
       <MobileNav open={open} setOpen={setOpen} />
       <div className="container mx-auto flex items-center justify-between">

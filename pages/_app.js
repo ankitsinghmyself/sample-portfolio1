@@ -1,6 +1,4 @@
 import '../styles/globals.css';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
 import { useEffect, useState } from 'react';
 import animation from '../styles/animation.module.css';
 import BonusBall from '../components/BonusBall';
@@ -25,9 +23,7 @@ function MyApp({ Component, pageProps }) {
         </div>
       ) : (
         <>
-          <Navbar />
           <Component {...pageProps} />
-          <Footer />
         </>
       )}
     </>
