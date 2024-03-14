@@ -4,8 +4,8 @@ import BonusBall from "../components/BonusBall";
 import HeroSection from "../components/HeroSection";
 import PortfolioSection from "../components/PortfolioSection";
 import AboutMe from "../components/AboutMe";
-import Footer from "../components/Footer";
-import Navbar from '../components/Navbar';
+import Footer from "../components/footer";
+import Navbar from '../components/navbar';
 
 export default function Home() {
   return (

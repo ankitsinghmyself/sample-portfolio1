@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 function NavLink({ to, children, onClick }) {
+  
   return (
     <ScrollLink
       to={to}
